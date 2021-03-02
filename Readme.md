@@ -1,4 +1,4 @@
-#Weather App
+# Weather App
 
 This is a weather app build in vanilla Javascript.
 
