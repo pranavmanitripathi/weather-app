@@ -11,7 +11,7 @@ const searchInputBox = document.querySelector("#input-box");
 searchInputBox.addEventListener('keypress',srchdata);
 
 function srchdata(){
-    if(event.keyCode==13){
+    if(event.keyCode==13){ // 13 is enter key
     getWeatherReport(searchInputBox.value);
     document.querySelector('.weather-body').style.display = "block";
     }
@@ -20,7 +20,7 @@ function srchdata(){
 function getWeatherReport(city) {
     fetch(`${weatherApi.baseUrl}?q=${city}&appid=${weatherApi.key}&units=metric`) 
     .then(weather => {
-        return weather.json();
+        return weather.json(); //return promise
     }).then(showWeatherReport);   
 }
 
